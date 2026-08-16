@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Bonding</title>
+    <style>
+        :root { --bg: #1a0f0f; --panel: #000000; --accent: #00ff6a; --hi: #fff; --warn: #ff3e3e; }
+        body { background: var(--bg); color: #888; font-family: 'SF Mono', monospace; margin: 0; display: flex; height: 100vh; overflow: hidden; }
+        #ui-root { width: 350px; background: var(--panel); border-right: 1px solid #1a1a1a; padding: 25px; z-index: 10; display: flex; flex-direction: column; }
+        #treeCanvas { flex-grow: 1; background: radial-gradient(circle at bottom, #080808 0%, #000 100%); cursor: crosshair; }
+        h1 { color: var(--hi); font-size: 14px; letter-spacing: 3px; margin: 0 0 5px 0; }
+        .sub { color: var(--accent); font-size: 20px; margin-bottom: 25px; text-transform: uppercase; opacity: 0.7; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; font-size: 20px; color: #3700ff; margin-bottom: 5px; text-transform: uppercase; }
+        input, select { width: 100%; background: #000; border: 1px solid #222; padding: 10px; color: var(--hi); font-family: inherit; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: var(--accent); border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 10px; margin-top: 10px; }
+        button:disabled { background: #111; color: #333; cursor: not-allowed; }
+        .hud-stats { border-top: 1px solid #111; margin-top: 20px; padding-top: 20px; font-size: px; line-height: 2; }
+        .hud-stats span { color: var(--hi); }
+        #msg { position: fixed; top: 20px; right: 20px; color: var(--accent); font-size: 10px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <div id="msg"></div>
+    <div id="ui-root"></div>
+    <canvas id="treeCanvas"></canvas>
+
+    <script src="engine.js"></script>
+</body>
+</html>
